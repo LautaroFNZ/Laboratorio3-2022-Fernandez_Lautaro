@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Parcial</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div>
+        <form id="FrmDatos">
+            <h1>Formulario Datos</h1>
+            <div class="Filtro">
+                <label for="">Filtrar por:</label>
+                <select name="filtroTipo" id="filtroTipo">
+                    <option value="vTodos">Todos</option>
+                    <option value="vHeroe">Heroe</option>
+                    <option value="vVillano">Villano</option>
+                </select>
+            </div>
+
+            <div class="Calculador">
+                <label for="">Calcular edad promedio</label>
+                <input type="text" name="mostrarPromedio" id="mostrarPromedio" placeholder="Aqui se mostrará el promedio" readonly="true">
+                <button id="btnPromedioEdad">Calcular</button>
+            </div>
+
+            <label for="">Mostrar Columnas:</label>
+            <div class="Selector-Columnas">
+            ID:<input type="checkbox" name="cID" checked="checked" id="ID" class="CB">
+            Nombre:<input type="checkbox" name="cName" checked="checked" id="cNombre" class="CB">
+            Apellido:<input type="checkbox" name="cLastName" checked="checked" id="cApellido" class="CB">
+            Edad:<input type="checkbox" name="cEdad" checked="checked" id="cEdad" class="CB">
+            Alter Ego:<input type="checkbox" name="cAlterEgo" checked="checked" id="cAlterEgo" class="CB">
+            Ciudad:<input type="checkbox" name="cCiudad" checked="checked" id="cCiudad" class="CB">
+            Publicado:<input type="checkbox" name="cPublicado" checked="checked" id="cPublicado" class="CB"> 
+            Enemigo:<input type="checkbox" name="cEnemigo" checked="checked" id="cEnemigo" class="CB">
+            Robos<input type="checkbox" name="cRobos" checked="checked" id="cRobos" class="CB">
+            Asesinatos<input type="checkbox" name="cAsesinatos"checked="checked"  id="cAsesinatos" class="CB">
+        </div>
+
+        <table>
+            <thead> 
+            <tr>
+                <td><button id="btnID" class="btnTABLA">ID</button></td>
+                <td><button id="btnNombre" class="btnTABLA">Nombre</button></td>
+                <td><button id="btnApellido" class="btnTABLA">Apellido</button></td>
+                <td><button id="btnEdad" class="btnTABLA">Edad</button></td>
+                <td><button id="btnAE" class="btnTABLA">ALTER EGO</button></td>
+                <td><button id="btnCiudad" class="btnTABLA">CIUDAD</button></td>
+                <td><button id="btnPublicado" class="btnTABLA">PUBLICADO</button></td>
+                <td><button id="btnEnemigo" class="btnTABLA">ENEMIGO</button></td>
+                <td><button id="btnRobos" class="btnTABLA">Robos</button></td>
+                <td><button id="btnKills" class="btnTABLA">ASESINATOS</button></td>
+            </tr>
+        </thead>
+        <tbody id="persona-container">
+            
+        </tbody>
+        </table>
+
+        <button id="btnAgregar">Agregar</button>
+
+        </form>
+    </div>
+
+    <div id="FrmABM">
+        <form class="FrmABM">
+            <h1>Formulario ABM</h1>
+
+            <div class="inputs">
+                <input type="number" id="txtId" placeholder="Ingrese su id:" readonly="true">
+                <input type="text" id="txtNombre" placeholder="Ingrese su nombre:">
+                <input type="text" id="txtApellido" placeholder="Ingrese su apellido:">
+                <input type="number" id="txtEdad" placeholder="Ingrese su edad:">
+                
+
+                <select id="SelectTipo">
+                        <option value="tVacio" selected="selected" disabled="disabled">Seleccione su Tipo</option>
+                        <option value="tHeroe">Heroe</option>
+                        <option value="tVillano">Villano</option>
+                </select>
+
+                <input type="text" id="txtAE" placeholder="Ingrese su alter ego:">
+                <input type="text" id="txtCiudad" placeholder="Ingrese su ciudad:">
+                <input type="number" id="txtPublicado" placeholder="Ingrese publicado:">
+                <input type="text" id="txtEnemigo" placeholder="Ingrese su enemigo:">
+                <input type="number" id="txtRobos" placeholder="Ingrese robos:">
+                <input type="number" id="txtKills" placeholder="Ingrese asesinatos">
+                
+                <button id="btnAlta">Alta</button> <button id="btnModificar">Modificar</button> <button id="btnEliminar">Eliminar</button> <button id="btnCancelar">Cancelar</button>
+            </div>
+            
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
